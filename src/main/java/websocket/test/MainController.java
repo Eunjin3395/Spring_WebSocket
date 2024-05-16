@@ -16,8 +16,6 @@ public class MainController {
     public MessageDTO greeting(JoinDTO message) throws Exception {
         Thread.sleep(1000); // simulated delay
         log.info(message.getName());
-        MessageDTO value = new MessageDTO("Hello, " + HtmlUtils.htmlEscape(message.getName()) + "!");
-        log.info(value.getMessage());
-        return value ;
+        return new MessageDTO("Hello, " + HtmlUtils.htmlEscape(message.getName()) + "!") ;
     }
 }
